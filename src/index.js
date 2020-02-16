@@ -4,7 +4,7 @@ import app from './app';
 
 config()
 
-const {PORT}=process.env;
+const PORT=process.env.PORT;
 
 (async()=>{
     try {
