@@ -18,7 +18,7 @@ app.use((req,res,next)=>{
 })
 
 //Cargamos una ruta estatica que es la carpeta client
-// app.use('/',express.static('dist/client',{redirect:false}));
+app.use('/',express.static('dist/client',{redirect:false}));
 
 app.use('/api',cotizacionRoute);
 
@@ -26,9 +26,9 @@ app.use('/',(req, res)=>{
     res.status(200).json({message:'Bienvenido'})
 })
 
-// app.get('*',function (req,res,next) {
-// 	res.sendFile(path.resolve('dist/client/index.html'));
+app.get('*',function (req,res,next) {
+	res.sendFile(path.resolve('dist/client/index.html'));
 	
-// });
+});
 
 module.exports=app
