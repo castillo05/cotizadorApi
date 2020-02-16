@@ -7,9 +7,7 @@ var _app = _interopRequireDefault(require("./app"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _dotenv.config)();
-const {
-  PORT
-} = process.env;
+const PORT = 5000 || process.env;
 
 (async () => {
   try {
